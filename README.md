@@ -31,6 +31,36 @@ Bu depo, C programlama öğrenme sürecimdeki çalışmalarımı ve notlarımı 
 * `%s` -> Metinsel ifadeleri (string) yazdırır.
 * `%u` -> `unsigned int` veri tipini yazdırır.
 
+## Function Return Types: `int` vs `void`
+
+C dilinde fonksiyonların çalışma prensibi ve geriye dönüş değerleri arasındaki temel farklar:
+
+
+
+| Özellik | `int` (Integer) | `void` (Hükümsüz/Boş) |
+| :--- | :--- | :--- |
+| **Tanım** | Geriye bir tam sayı döndüren fonksiyon. | Geriye değer döndürmeyen fonksiyon. |
+| **Zorunluluk** | `return` ifadesi **zorunludur**. | `return` ifadesi **kullanılmaz**. |
+| **Kullanım Yeri** | Hesaplama sonuçları, Hata kodları (`main`). | Ekrana yazdırma, işlem yapma, menü gösterme. |
+| **Örnek** | `return 0;` veya `return sonuc;` | (Boş bırakılır) |
+
+```c
+/* --- KULLANIM ORNEGI --- */
+
+// 1. VOID FONKSIYON (Is yapan iscidir, rapor vermez)
+void selamla() {
+    printf("Sistem baslatiliyor...\n");
+    // Return yoktur, is bitince kapanir.
+}
+
+// 2. INT FONKSIYON (Yonetici, rapor verir)
+int main() {
+    selamla(); // Void fonksiyonu buradan cagirilir.
+    
+    // Isletim sistemine "0 hata ile bitti" raporu verilir.
+    return 0; 
+
+
 ---
 ### Diğer Notlarım
 * [Markdown Kullanım Rehberim için buraya tıkla](MARKDOWN_NOTLARI.md)

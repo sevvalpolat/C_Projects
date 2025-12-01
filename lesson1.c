@@ -49,7 +49,7 @@ void ornek_daire_hesaplama() {
     printf("enter the radius of the circle:");
     scanf("%f", &r);
 
-    circumference = 2 * PI * r; // Formülde ufak bir düzeltme: Çevre 2*pi*r'dir.
+    circumference = 2 * PI * r;
     area = PI * r * r;
 
     printf("area of the circle is %f\n", area);
