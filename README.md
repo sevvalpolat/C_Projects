@@ -77,7 +77,6 @@ C dilinde veri alma ve yazdırma işlemleri belirli kurallara dayanır.
 * **Değişken (`myCity`)**: O koltuğa oturacak olan gerçek veridir.
 * **Kaçış Karakteri (`\n`)**: "New Line". Enter tuşuna basılmış gibi imleci alt satıra indirir.
 
----
 
 ### 2. scanf ve Adres Operatörü (`&`)
 `scanf`, kullanıcıdan alınan veriyi bellekteki (RAM) doğru kutuya teslim etmekle görevli bir kuryedir.

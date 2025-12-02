@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 // --- ORNEK 1: Matematiksel Islemler ---
-void ornek_matematik_islemleri() {
+void ornek_matematik_islemleri()
+{
     int myNumber, myNumber2, mySum, mySubtraction, myMultiplication, myDivision;
 
     myNumber = 6;
@@ -25,7 +26,8 @@ void ornek_matematik_islemleri() {
  scanf: Kullanıcıdan veya bir dosyadan girdi okumanıza ve
  bu girdiyi farklı veri türlerindeki değişkenlerde saklamanıza olanak tanır.
 */
-void ornek_scanf_kullanimi() {
+void ornek_scanf_kullanimi()
+{
     int myNumber, myNumber2;
     printf("Enter two numbers:");
     scanf("%d %d", &myNumber, &myNumber2);
@@ -33,7 +35,8 @@ void ornek_scanf_kullanimi() {
 }
 
 // --- ORNEK 3: Daire Alani Hesaplama ---
-void ornek_daire_hesaplama() {
+void ornek_daire_hesaplama()
+{
     // dairenin çevresini ve alanını bulan program
     // 1-ihtiyacımız olan variables bul ve tanımla
     // 2-variables type bul
