@@ -59,8 +59,47 @@ int main() {
     
     // Isletim sistemine "0 hata ile bitti" raporu verilir.
     return 0; 
+}
+ ```   
+--- 
+    
+## Input & Output Mantığı (printf & scanf Detayları)
 
+C dilinde veri alma ve yazdırma işlemleri belirli kurallara dayanır.
 
+### 1. printf (Çıktı Alma) Nasıl Çalışır?
+`printf` fonksiyonu bir **"Boşluk Doldurma Oyunu"** gibi çalışır.
+
+**Örnek:** `printf("Sehir: %s\n", myCity);`
+
+* **Şablon (`"..."`)**: Ekrana basılacak ana cümledir.
+* **Yer Tutucu (`%s`, `%d`)**: Değişkenin oturacağı koltuktur. Bilgisayar `%` işaretini görünce oraya dışarıdan bir veri geleceğini anlar.
+* **Değişken (`myCity`)**: O koltuğa oturacak olan gerçek veridir.
+* **Kaçış Karakteri (`\n`)**: "New Line". Enter tuşuna basılmış gibi imleci alt satıra indirir.
+
+---
+
+### 2. scanf ve Adres Operatörü (`&`)
+`scanf`, kullanıcıdan alınan veriyi bellekteki (RAM) doğru kutuya teslim etmekle görevli bir kuryedir.
+
+**Sembol:** `&`
+**Teknik Adı:** Address-of Operator (Adres Operatörü)
+**Günlük Adı:** Ampersand
+**Görevi:** Bir değişkenin bellekteki tam konumunu (GPS koordinatını) verir.
+
+**Neden `&` Kullanılır?**
+* **`printf` (Okuyucu):** Sadece kutunun içindeki değeri okur, adresi bilmesine gerek yoktur.
+* **`scanf` (Yazıcı):** Veriyi kutunun **içine koyacağı** için, o kutunun tam adresini (`&`) bilmek zorundadır.
+
+**Çoklu Veri Alma Örneği:**
+```c
+// Kuryeye 2 paket verilir, 2 ayrı teslimat adresi (&) gerekir.
+scanf("%f %f", &sayi1, &sayi2);
+```
+### Önemli İstisna (Stringler) :
+*  Stringler ( Metin dizileri) , yapıları gereği zaten bir "başlangıç adresi"bildirdikleri için `scanf` ile kullanılırken başlarına `&` konulmaz.
+Doğru:`scanf("%s",myCity);`
+Yanlış:`scanf("%s",&myCity);`
 ---
 ### Diğer Notlarım
 * [Markdown Kullanım Rehberim için buraya tıkla](MARKDOWN_NOTLARI.md)
