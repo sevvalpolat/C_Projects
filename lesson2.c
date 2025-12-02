@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 // --- ORNEK 1: Kare ve Kup Hesaplama (Formatlı Yazdırma) ---
-void ornek_kare_kup_hesapla() {
+void ornek_kare_kup_hesapla()
+{
     float number1, number2, number3, number4;
 
     printf("Enter four numbers: ");
@@ -28,7 +29,8 @@ void ornek_kare_kup_hesapla() {
 }
 
 // --- ORNEK 2: String (Metin) Alma ---
-void ornek_sehir_ismi() {
+void ornek_sehir_ismi()
+{
     // char myCity[12] -> Bellekte 12 kutucukluk yer acar.
     // En fazla 11 harfli sehir yazilabilir (Son kutucuk bitis isareti icindir).
     char myCity[12];
@@ -43,7 +45,8 @@ void ornek_sehir_ismi() {
 }
 
 // --- ORNEK 3: Aritmetik Islemler ve Mod Alma ---
-void ornek_aritmetik_islemler() {
+void ornek_aritmetik_islemler()
+{
     int x, y, div, sum, sub, multi, mod;
     x = 6;
     y = 4;
@@ -93,4 +96,42 @@ void ornek_increment_decrement() {
     // 1. y = y + 1 (y simdi 5 olur)
     // 2. x = y (x de 5 olur)
     printf("x = ++y sonrasi -> x:%d, y:%d\n", x, y);
+}
+
+
+// --- ORNEK 5: Artirma ve Azaltma Operatorleri (Quiz) ---
+void ornek_increment_decrement_quiz()
+{
+
+    // --- BOLUM 1: Temel Fark (Once mi Sonra mi?) ---
+    int skor = 10;
+    int a, b;
+
+    // a = skor++ -> (Post) Once a'ya 10'u ata, SONRA skoru artir (11 yap).
+    a = skor++;
+
+    // b = ++skor -> (Pre)  Once skoru artir (12 yap), SONRA b'ye ata.
+    b = ++skor;
+
+    printf("--- 1. Temel Mantik ---\n");
+    printf("a (Eski deger) : %d\n", a);    // 10
+    printf("b (Yeni deger) : %d\n", b);    // 12
+    printf("skor (Son hal): %d\n\n", skor); // 12
+
+
+    // --- BOLUM 2: Karma Islem ---
+    int x = 5;
+    int y = 8;
+    int sonuc;
+
+    // Soru: (x++) + (--y) + 10
+    // Cozum:  5   +   7    + 10 = 22
+    // Not: x islemde 5 kullanilir ama hafizada 6 olur. y once azalir 7 olur.
+    sonuc = (x++) + (--y) + 10;
+
+    printf("--- 2. Karma Islem ---\n");
+    printf("Islem : (x++) + (--y) + 10\n");
+    printf("x Son Hal : %d\n", x);      // 6
+    printf("y Son Hal : %d\n", y);      // 7
+    printf("Sonuc     : %d\n", sonuc);  // 22
 }
