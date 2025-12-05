@@ -1,10 +1,18 @@
 #include <stdio.h>
-int main()
-{
-    char myCity[13];
-    printf("Enter the name of city:");
-    scanf("%s", myCity);
-    printf("the name of your city is %s",myCity);
+int main() {
+    int number1, number2;
+    number1 = 0;
+    number2 = 0;
+    printf("Enter two numbers:\n");
+    scanf("%d %d", &number1, &number2);
+    if (number1 > number2) {
+        printf("number1 is greater than number2\n");
+    }else if (number2 > number1) {
+        printf("number2 is greater than number1\n");
+    }else {
+        printf("number1 is equal number2\n");
+    }
     return 0;
+
 
 }

@@ -99,6 +99,47 @@ scanf("%f %f", &sayi1, &sayi2);
 *  Stringler ( Metin dizileri) , yapıları gereği zaten bir "başlangıç adresi"bildirdikleri için `scanf` ile kullanılırken başlarına `&` konulmaz.
 Doğru:`scanf("%s",myCity);`
 Yanlış:`scanf("%s",&myCity);`
+
+---
+# Comparison and Logical Operators in C
+
+This document summarizes the **Comparison** and **Logical** operators in the C programming language. These operators are fundamental for making decisions in algorithms.
+
+## 1. Comparison Operators (Karşılaştırma Operatörleri)
+These operators compare two values and return a boolean result: **True (1)** or **False (0)**.
+
+| Operator | Meaning | Example | Result (if a=10, b=5) |
+| :---: | :--- | :--- | :--- |
+| `==` | Equal to | `a == b` | 0 (False) |
+| `!=` | Not equal to | `a != b` | 1 (True) |
+| `>` | Greater than | `a > b` | 1 (True) |
+| `<` | Less than | `a < b` | 0 (False) |
+| `>=` | Greater than or equal to | `a >= b` | 1 (True) |
+| `<=` | Less than or equal to | `a <= b` | 0 (False) |
+
+> **⚠ Important Note:** Do not confuse the assignment operator (`=`) with the comparison operator (`==`).
+> * `x = 5` (Assigns 5 to x)
+> * `x == 5` (Checks if x is equal to 5)
+
+---
+
+## 2. Logical Operators (Mantıksal Operatörler)
+Logical operators are used to combine multiple conditions.
+
+| Operator | Name | Symbol | Description | Example Logic |
+| :---: | :---: | :---: | :--- | :--- |
+| **AND** | `&&` | Ampersand | Returns true only if **both** statements are true. | `1 && 1` -> **1** (True) |
+| **OR** | `\|\|` | Pipe | Returns true if **at least one** statement is true. | `1 \|\| 0` -> **1** (True) |
+| **NOT** | `!` | Exclamation | Reverses the result (True becomes False, and vice versa). | `!1` -> **0** (False) |
+| **XOR** | `^` | Caret | Returns true if inputs are **different** (One is True, the other is False). | `1 ^ 0` -> **1** (True)<br>`1 ^ 1` -> **0** (False) |
+
+### Truth Logic in C
+In C programming:
+* **0** represents **False**.
+* **Non-zero values** (usually 1) represent **True**.
+* **XOR Note:** While `^` is technically a *bitwise* operator in C, it functions as a Logical XOR when comparing 0s and 1s.
+
+
 ---
 ### Diğer Notlarım
 * [Markdown Kullanım Rehberim için buraya tıkla](MARKDOWN_NOTLARI.md)
