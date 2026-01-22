@@ -1,6 +1,6 @@
 /*
-* Project: Triangle Type Determiner
-* Author:Sevval
+ * Project: Triangle Type Determiner
+ * Author:Sevval
  * Description: Reads three angles from the user and determines the type of the triangle.
  * It checks for validity (sum must be 180) and classifies it as Equilateral, Isosceles, or Scalene.
  */
