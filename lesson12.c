@@ -3,7 +3,6 @@
  *Author: Sevval
  *Description: Check if the Square Root Is an Integer.
  */
-
 #include <stdio.h>
 #include <math.h>
 void checkSquareRootInteger() {
