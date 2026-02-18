@@ -4,4 +4,7 @@ project(C_Projects C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(C_Projects main.c
-        lesson13.c)
+        lesson13.c
+        lesson14.c
+        lesson15.c
+        lesson16.c)
